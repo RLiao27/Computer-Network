@@ -1,2 +1,2 @@
 # Computer-Network
-FDU computer network group project
+Code repository for Computer network group project 2021
