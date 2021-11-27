@@ -1,0 +1,14 @@
+<config>
+    <rootDir>root</rootDir>
+    <users>
+        <user>
+            <username>test</username>
+            <password>test</password>
+        </user>
+        <user>
+            <username>anonymous</username>
+            <password></password>
+        </user>
+    </users>
+
+</config>
