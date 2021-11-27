@@ -72,7 +72,7 @@ public final class RxTools {
 
     /**
      * pattern: Observable/Observer
-     * make Observable to emit some data without dealing with backpressure now.
+     * 让Observable发出数据而不处理背压
      * @param func
      * @return
      *
@@ -82,7 +82,6 @@ public final class RxTools {
         return Observable.create(new ObservableOnSubscribe<T>() {
             @Override
             public void subscribe(ObservableEmitter<T> emitter) throws Exception {
-                // TODO Auto-generated method stub
                 try{
                     emitter.onNext(func.call());
                     emitter.onComplete();
@@ -94,7 +93,7 @@ public final class RxTools {
     }
 
     /**
-     * common obserable using io-main schedules model.
+     * Observable-main模型
      * @param func
      * @param <T>
      * @return
@@ -106,7 +105,7 @@ public final class RxTools {
 
     /**
      * pattern : Flowable/Subscriber
-     * make flowable to emit data support for backpressure.
+     * 让Flowable支持背压数据处理
      * @param func
      * @return
      */
@@ -115,7 +114,6 @@ public final class RxTools {
         return Flowable.create(new FlowableOnSubscribe<T>(){
             @Override
             public void subscribe(FlowableEmitter<T> emitter) throws Exception {
-                // TODO Auto-generated method stub
                 try{
                     emitter.onNext(func.call());
                     emitter.onComplete();
@@ -127,7 +125,7 @@ public final class RxTools {
     }
 
     /**
-     * common flowable using io-main schedules model
+     * 一般flowable使用io-main模型
      * @param func
      * @param <T>
      * @return
@@ -162,7 +160,6 @@ public final class RxTools {
         return Observable.create(new ObservableOnSubscribe() {
             @Override
             public void subscribe(ObservableEmitter emitter) throws Exception {
-                // TODO Auto-generated method stub
                 try{
                     func.run();
                     emitter.onComplete();
@@ -227,7 +224,6 @@ public final class RxTools {
         return new FlowableTransformer<T, T>() {
             @Override
             public Publisher<T> apply(Flowable<T> flowable) {
-                // TODO Auto-generated method stub
                 return flowable.subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
             }

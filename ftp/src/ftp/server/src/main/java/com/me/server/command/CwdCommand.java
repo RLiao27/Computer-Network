@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
- * CMD Command:
+ * CMD 命令:
  * 用于切换服务器的运行目录
  * */
 public class CwdCommand implements Command{

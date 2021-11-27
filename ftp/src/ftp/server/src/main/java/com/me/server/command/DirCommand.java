@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Vector;
 /**
- * Dir Command:
+ * Dir 命令:
  * 用于查看服务器指定目录下的文件
  * */
 public class DirCommand implements Command{

@@ -12,11 +12,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-/**
- * @author lisc
- * @date 2015/12/15
- * @version 1.0
- */
 public class CommonViewHolder {
 	
 	private final SparseArray<View> mViews;
@@ -36,7 +31,7 @@ public class CommonViewHolder {
 	 * @return
 	 */
 	public static CommonViewHolder get(View convertView,
-                                                                 ViewGroup parent, int layoutId)
+    ViewGroup parent, int layoutId)
 	{
 		if(convertView == null){
 			return new CommonViewHolder(parent, layoutId);

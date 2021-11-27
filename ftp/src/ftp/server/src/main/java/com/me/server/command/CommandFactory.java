@@ -1,7 +1,7 @@
 package com.me.server.command;
 /**
- * FTP Command Factory
- * Distribute it to different processors according to customer request commands
+ * FTP 命令
+ * 根据要求命令分配给不同的处理器
  * */
 public class CommandFactory {
 

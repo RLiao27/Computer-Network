@@ -20,7 +20,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 /**
- * login page
+ * 登录界面
  * */
 public class LoginActivity extends AppCompatActivity {
     private EditText ipEt;
